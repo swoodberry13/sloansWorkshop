@@ -6,7 +6,30 @@
 	<title>home</title>
 	<link rel="stylesheet" href="style.css">
 	<style type="text/css">
-		
+		#container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #grid {
+        	display: grid;
+        	height: max-content;
+        	grid-template-columns: repeat(3, 330px);
+        	grid-template-rows: auto;
+        	column-gap: 3vw;
+        	row-gap: 3vw;
+        	justify-content: center;
+        	align-items: stretch;
+        	padding: 2vw 4vw;
+        }
+        .grid-item {
+        	display: flex; 
+        	flex-direction: column; 
+        	align-items: center;
+        	background-color: #A5D7F9;
+        	border-radius: 1rem;
+        	padding: 30px;
+        }
 	</style>
 </head>
 <body>
@@ -17,14 +40,19 @@
 	 	<img id='menuIcon' src="images/menuIcon.png">
 	    <div class="header-links" >
 	        <a id='home' href="home.html">Home</a>
-	        <a id='about'  href="about.html">About</a>
 	        <a id='projects'  href="projects.html">Projects</a>
 	        <a id='resume'  href="resume.html">Resumé</a>
 	      </div>
 	 </div>
 
 	</div>
-<p>ewerdtferw</p>
+	<h1>Projects</h1>
+	<div id="container">
+		<div id="grid">
+			
+		</div>
+		
+	</div>
 	
 
 </body>
