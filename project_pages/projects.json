@@ -1,35 +1,35 @@
 [
 	{
 		"name":"CNC desk",
-		"img":"mypic.png",
+		"img":"images/mainProjectPics/desk.jpg",
 		"description":"My new desk that I built for a final project in a manufacturing class",
 		"link":"desk.html",
 		"skills": ["woodworking","CNC","CAD", "design"]
 	},
 	{
 		"name":"Sir Dentist Game",
-		"img":"mypic.png",
+		"img":"images/mainProjectPics/sirDentist.png",
 		"description":"A platformer game that I helped design and code using unity",
 		"link":"sirDentist.html",
 		"skills": ["Art","Code","Unity","C++"]
 	},
 	{
 		"name":"Ukulele",
-		"img":"mypic.png",
+		"img":"images/mainProjectPics/uke.jpg",
 		"description":"A Ukulele that I built and analyzed as a final project",
 		"link":"ukulele.html",
 		"skills": ["woodworking","Code","Labview","CNC","CAD"]
 	},
 	{
 		"name":"Gertie: The robotic dog",
-		"img":"mypic.png",
+		"img":"images/mainProjectPics/desk.jpg",
 		"description":"A robotic quadruped I helped build",
 		"link":"gertie.html",
 		"skills": ["robotics", "CAD", "lasercutting", "3D printing","Code"]
 	},
 	{
 		"name":"NB+C Work",
-		"img":"mypic.png",
+		"img":"images/mainProjectPics/desk.jpg",
 		"description":"Examples of the work I during my time at NB+C",
 		"link":"gertie.html",
 		"skills": [ "Documentation", "CAD", "RISA"]
