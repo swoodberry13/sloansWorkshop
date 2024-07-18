@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>home</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="style.css">
 	<style type="text/css">
 		#container {
@@ -47,9 +48,25 @@
 
 	</div>
 	<h1>Projects</h1>
+	<script type="text/javascript">
+		$.get("https://raw.githubusercontent.com/swoodberry13/sloansWorkshop/main/project_pages/projects.json",function( data ) {
+			str = JSON.stringify(data);
+			console.log(str);	
+			data = JSON.parse(data);
+			// allCatagories=[];
+
+			// data.forEach(function(project) { 
+			// 	str+="<div class=\"grid-item\">"+
+			// 	"<h2 class=\"name\">" + product.name + "</h2>"+
+			// 	"<p class=\"description\">" + product.description + "</p>";
+			// })
+
+			// document.getElementById('grid').innerHTML = str;
+		})
+	</script>
 	<div id="container">
 		<div id="grid">
-			
+
 		</div>
 		
 	</div>
