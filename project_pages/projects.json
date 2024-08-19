@@ -4,28 +4,63 @@
 		"img":"images/mainProjectPics/desk.jpg",
 		"description":"My new desk that I built for a final project in a manufacturing class",
 		"link":"desk.html",
-		"skills": ["woodworking","CNC","CAD", "design"]
+		"skills": ["Woodworking","CNC","CAD", "Design"]
 	},
 	{
 		"name":"Sir Dentist Game",
 		"img":"images/mainProjectPics/sirDentist.png",
 		"description":"A platformer game that I helped design and code using unity",
 		"link":"sirDentist.html",
-		"skills": ["Art","Code","Unity","C++"]
+		"skills": ["Art","Coding","Unity","C++"]
 	},
 	{
 		"name":"Ukulele",
 		"img":"images/mainProjectPics/uke.jpg",
 		"description":"A Ukulele that I built and analyzed as a final project",
 		"link":"ukulele.html",
-		"skills": ["woodworking","Code","Labview","CNC","CAD"]
+		"skills": ["Woodworking","Coding","Labview","CNC","CAD"]
 	},
 	{
 		"name":"Gertie: The robotic dog",
 		"img":"images/mainProjectPics/desk.jpg",
 		"description":"A robotic quadruped I helped build",
 		"link":"gertie.html",
-		"skills": ["robotics", "CAD", "lasercutting", "3D printing","Code"]
+		"skills": ["Robotics", "CAD", "Lasercutting", "3D printing","Coding","Python"]
+	},
+	{
+		"name":"Trigger Mechanism",
+		"img":"images/mainProjectPics/desk.jpg",
+		"description":"A simple trigger mechanism I built to help launch a catapult",
+		"link":"gertie.html",
+		"skills": [ "Prototyping", "CAD", "3D printing"]
+	},
+	{
+		"name":"Vending Machine Robot",
+		"img":"images/mainProjectPics/desk.jpg",
+		"description":"A semester long project to build a remote controlled mobile vending machine",
+		"link":"gertie.html",
+		"skills": [ "Prototyping", "CAD", "3D printing", "Lasercutting","Design","Documentation","Robotics"]
+	},
+	{
+		"name":"Bunny Robot",
+		"img":"images/mainProjectPics/desk.jpg",
+		"description":"A simple bunny robot with a light sensor",
+		"link":"gertie.html",
+		"skills": [ "Prototyping", "CAD", "Lasercutting","Design","Documentation","Coding","Robotics","Python"]
+	},
+	{
+		"name":"Disco/Metal Robot",
+		"img":"images/mainProjectPics/desk.jpg",
+		"description":"A discoball robot that utilizes the spotify API",
+		"link":"gertie.html",
+		"skills": [ "Prototyping", "CAD", "Lasercutting","Design","Documentation","Coding","Robotics","Python"]
+	},
+	{
+		"name":"Vibe Check",
+		"img":"images/mainProjectPics/desk.jpg",
+		"description":"Final project for a web design class the utilizes the spotify API",
+		"link":"gertie.html",
+		"skills": [ "Coding", "Design","HTML/CSS","PHP"]
 	},
 	{
 		"name":"NB+C Work",

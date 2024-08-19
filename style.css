@@ -143,10 +143,11 @@ color: #FFEBEB;
 	text-align: center;
 	margin: 10px,20px,10px,20px;
 	img{
-		height: 100%;
-		width:auto;
+		height: auto;
+		max-width: 90%;
 		border-radius: 10px;
 		margin: auto;
+
 	}
 }
 .left-imgBlock{
@@ -159,8 +160,9 @@ color: #FFEBEB;
 @media (max-width: 800px) { 
 	.right-imgBlock, .left-imgBlock {
 		flex: 100%;
-	width: max-content;
-margin: auto;}
+		height: auto;
+		max-width: 90%;
+		margin: auto;}
 }
 
 
