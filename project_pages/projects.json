@@ -8,14 +8,14 @@
 	},
 	{
 		"name":"Sir Dentist Game",
-		"img":"images/projects/desk/deskMAIN.jpg",
+		"img":"images/projects/sirDentist/sirDentistMAIN.png",
 		"description":"A platformer game that I helped design and code using unity",
 		"link":"sirDentist.html",
 		"skills": ["Art","Coding","Unity","C++"]
 	},
 	{
 		"name":"Ukulele",
-		"img":"images/projects/desk/deskMAIN.jpg",
+		"img":"images/projects/ukulele/ukeMAIN.jpg",
 		"description":"A Ukulele that I built and analyzed as a final project",
 		"link":"ukulele.html",
 		"skills": ["Woodworking","Coding","Labview","CNC","CAD"]
