@@ -1,13 +1,16 @@
-/*OLD:https://coolors.co/ffebeb-d43b34-efb9a9-ab2521-f18f01-2c1010/
-OLD https://coolors.co/201f3a-ffebeb-fffbfb-e4938c-cd6f65-be3f39-ab2521-6a0f0b
-NEWISH: https://coolors.co/b22020-6a0f0b-ee352a-f2e0c2-f1e3ca-10101f-22242e-ffebeb-fffbfb
+/*OLD COLOR Schemes:
+	-https://coolors.co/ffebeb-d43b34-efb9a9-ab2521-f18f01-2c1010/
+	- https://coolors.co/201f3a-ffebeb-fffbfb-e4938c-cd6f65-be3f39-ab2521-6a0f0b
+	- https://coolors.co/b22020-6a0f0b-ee352a-f2e0c2-f1e3ca-10101f-22242e-ffebeb-fffbfb
+Current color Scheme
+https://coolors.co/201f3a-feecde-e4938c-b54038-bf130d
 inspo:
-https://webfieldmanual.com/
-https://www.brandaiddesignco.com/process/nashville-web-design-services.html
-https://coneflowercreamery.com/
+	https://webfieldmanual.com/
+	https://www.brandaiddesignco.com/process/nashville-web-design-services.html
+	https://coneflowercreamery.com/
 */
 body{
-	background-color: #FFEBEB;
+	background-color: #FEECDE;
 	padding: 0px;
 	margin: 0px;
 	font-family: Arial,Trebuchet MS, sans-serif;
@@ -22,7 +25,8 @@ color: #FFEBEB;
 /*--------------------HEADER /MENU STUFF--------------------*/
 	.header {
 		overflow: hidden;
-		background-color: #CD6F65;
+		background-color:#B54038;
+/*		background-color: #CD6F65;*/
 		padding: 10px 2px;
 		justify-content: center;
 	}
