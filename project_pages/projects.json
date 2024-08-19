@@ -22,7 +22,7 @@
 	},
 	{
 		"name":"Gertie: The robotic dog",
-		"img":"images/projects/gertis/gertieMAIN.jpg",
+		"img":"images/projects/gertie/gertieMAIN.jpg",
 		"description":"A robotic quadruped I helped build",
 		"link":"gertie.html",
 		"skills": ["Robotics", "CAD", "Lasercutting", "3D printing","Coding","Python"]

@@ -77,6 +77,7 @@
 	</div>
 	<h1>Projects</h1>
 	<script type="text/javascript">
+
 		$.get("https://raw.githubusercontent.com/swoodberry13/sloansWorkshop/main/project_pages/projects.json",function( data ) {
 			str = JSON.stringify(data);
 			data = JSON.parse(data);
@@ -89,7 +90,7 @@
 				"<img src=\""+project.img+"\">"+
 				"<p class=\"description\">" + project.description + "</p>"
 				+"</div>";
-				console.log
+
 
 			})
 
@@ -98,9 +99,7 @@
 	</script>
 	<div id="container">
 		<div id="grid">
-
 		</div>
-		
 	</div>
 	
 
