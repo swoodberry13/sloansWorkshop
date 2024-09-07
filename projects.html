@@ -16,8 +16,13 @@
         }
         .name{
         	margin: 10px;
+        	text-align: center;
         	color: #870804;
 	}
+	.description{
+		margin-top:16px;
+		margin-bottom: 10px;
+	} 
         #grid {
         	display: grid;
         	height: max-content;
@@ -38,26 +43,35 @@
         	padding: 10px 18px;
         	overflow: clip;
         }
-        .grid-item img{
-        	float: left;
+        .grid-item img{/* images for each project */
+
         	width:280px;
         	height: 200px;
-/*        	width:  30vw;
-        	height: 30vw;*/
         	margin: 10px 20px;
         	object-fit: cover;
         	border: 2px solid #BF130D;
         	border-radius: 2px;
+        	text-align: center;
         }
-        .grid-item p{
+        .grid-item a{
+        	text-decoration: none;
+        }
 
+        .projectSkill{
+        	text-decoration: none;
+        	padding: 0px;
+        	text-align: center;
+        	margin: 5px;
         }
-        .imgBox{
-        	    position: relative;
-        	    width: 100%;
-        	    height: 0;
-        	    padding-top: calc(100% * (100 / 300));
-        	    overflow: hidden;
+        .projectSkill li{
+        	display: inline-block;
+        	color: #FEECDE;
+        	background-color: #BF130D;
+        	border-radius: 4px;
+        	
+        	padding: 5px 10px;
+        	margin: 5px 10px;
+        	font-size: 14px;
         }
         @media (max-width: 1100px) {
         	#grid {
@@ -91,23 +105,67 @@
 		$.get("https://raw.githubusercontent.com/swoodberry13/sloansWorkshop/main/project_pages/projects.json",function( data ) {
 			str = JSON.stringify(data);
 			data = JSON.parse(data);
-			allCatagories=[];
+			allSkills=[];
 
 			str="";
-			data.forEach(function(project) { 
-				str+="<div class=\"grid-item\">"+
-				"<h2 class=\"name\">" + project.name + "</h2>"+
-				"<a href=\""+project.link+"\">"+
-				"<img src=\""+project.img+"\"></a>"+
-				"<p class=\"description\">" + project.description + "</p>"
-				+"</div>";
 
+			data.forEach(function(project) { //adding all the projects to the page
+				str+="<div class=\"grid-item\">";
+				str+="<a href=\""+project.link+"\">";
+				str+="<h2 class=\"name\">" + project.name + "</h2>";
+				str+="</a>";
+				str+="<img src=\""+project.img+"\">"
+				str+="<p class=\"description\">" + project.description + "</p>";
 
+				str+="<ul class=\"projectSkill\">";
+				for (let i in project.skills){
+					if(!allSkills.includes(project.skills[i])){//checking to see if new skills need to be added to allSkills
+						allSkills.push(project.skills[i]);
+					}
+					//adding skill to list for the current project
+					str+="<li id=\""+project.skills[i]+"\">"+project.skills[i]+"</li>";
+				}
+				str+="</ul>";
+
+				str+="</div>";//end of project box
 			})
+
+
+			//filter at the top
+			drop_down_str="<h3>Filter: </h3> <select name=\"filter\" id=\"dropDown\" onChange=\"filterFunct(this)\">";
+
+			//adding unselectable starting option
+			drop_down_str+="<option disabled selected value> -- select an option -- </option>";
+
+			for(let i in allSkills){//reads in categories from JSON 
+				drop_down_str+="<option value=\""+allSkills[i]+"\">"+allSkills[i]+"</option>";
+			}
+			drop_down_str+="</select>";
+			document.getElementById('filterBox').innerHTML = drop_down_str;//adding products to the page along with the drop down
+			
+
 
 			document.getElementById('grid').innerHTML = str;
 		})
+
+
+		function filterFunct(select){
+			pick=$('#dropDown option:selected').text();//reads in which form option was picked
+			pick="#"+pick;
+
+			//selects all the categories that don't have the pick
+			notPickStr=".projectSkill:not(:has("+pick+"))";
+
+			//selects all the categories that have the pick
+			pickStr=".projectSkill:has("+pick+")";
+
+			//gets the parent of the not picked categories (the li item) and makes it disappear
+			$(notPickStr).parent().css({"display":" none"});
+			//gets the parent of the picked categories (the li item) and makes it appear
+			$(pickStr).parent().css({"display":"block"});
+		}
 	</script>
+	<div id="filterBox"></div>
 	<div id="container">
 		<div id="grid">
 		</div>
