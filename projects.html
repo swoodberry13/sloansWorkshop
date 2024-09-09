@@ -132,16 +132,17 @@
 
 
 			//filter at the top
-			drop_down_str="<h3>Filter: </h3> <select name=\"filter\" id=\"dropDown\" onChange=\"filterFunct(this)\">";
+			// drop_down_str="<h3>Filter: </h3> <select name=\"filter\" id=\"dropDown\" onChange=\"filterFunct(this)\">";
 
-			//adding unselectable starting option
-			drop_down_str+="<option disabled selected value> -- select an option -- </option>";
+			// //adding unselectable starting option
+			// drop_down_str+="<option disabled selected value> -- select an option -- </option>";
 
+			filterOptions="<div id=filter <h3>Filter: </h3>";
 			for(let i in allSkills){//reads in categories from JSON 
-				drop_down_str+="<option value=\""+allSkills[i]+"\">"+allSkills[i]+"</option>";
+				filterOptions+="<button>"+allSkills[i]+"</button>";
 			}
-			drop_down_str+="</select>";
-			document.getElementById('filterBox').innerHTML = drop_down_str;//adding products to the page along with the drop down
+			filterOptions+="</div>";
+			document.getElementById('filterBox').innerHTML = filterOptions;//adding products to the page along with the drop down
 			
 
 
@@ -162,7 +163,7 @@
 			//gets the parent of the not picked categories (the li item) and makes it disappear
 			$(notPickStr).parent().css({"display":" none"});
 			//gets the parent of the picked categories (the li item) and makes it appear
-			$(pickStr).parent().css({"display":"block"});
+			$(pickStr).parent().css({"display":"flex"});
 		}
 	</script>
 	<div id="filterBox"></div>
