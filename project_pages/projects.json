@@ -66,14 +66,14 @@
 		"name":"Shelf",
 		"img":"images/projects/desk/deskMAIN.jpg",
 		"description":"A small shelf I designed and built for a friend",
-		"link":"project_pages/gertie.html",
+		"link":"project_pages/shelf.html",
 		"skills": ["Design","Woodworking"]
 	},
 		{
 		"name":"CNC plant stand",
 		"img":"images/projects/plant_stand/plant_standMAIN.jpeg",
 		"description":"A flower shaped plant stand I designed and built using a CNC",
-		"link":"project_pages/gertie.html",
+		"link":"project_pages/plantStand.html",
 		"skills": ["Design","Woodworking","CAD","CNC"]
 	},
 	{
