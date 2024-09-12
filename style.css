@@ -17,7 +17,8 @@ body{
 	font-family: Arial,Trebuchet MS, sans-serif;
 }
 p{
-color: white;
+color: black;
+margin:8px;
 }
 .hero-image{
 	width: 100%;
@@ -136,7 +137,7 @@ color: white;
 .imgBlock{
 	display: flex;
 	flex-wrap: wrap;
-	background-color: #E4938C;
+/*	background-color: #E4938C;*/
 	padding:  20px;
 	margin: 20px;
 	border-radius: 20px;
@@ -169,6 +170,39 @@ color: white;
 		max-width: 90%;
 		margin: auto;}
 }
+.text_block_center{ /* text block with a centered images */
+	padding:  8px 22px;
+	margin: 10px;
+	border-radius: 20px;
+	display: flex; 
+	flex-direction: column; 
+    align-items: center;
+
+}
+.inTextPic{ /*pictures for the text_block_center class*/
+	object-fit: cover;
+	text-align: center;
+	display: flex;
+	border-radius: 5px;
+}
+
+/*two images that are next to each other in web view but stack on top of eachother in mobile view*/
+.twoImages{
+	display: flex;
+	flex-wrap: wrap;
+  justify-content: center;
+
+
+}
+.twoImages img{
+	flex:50%;
+	margin: 5px;
+	border-radius: 5px;
+
+}
+/*.image_twoImages{
+	flex: 50%;
+}*/
 
 
 
