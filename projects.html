@@ -34,7 +34,7 @@
         	align-items: stretch;
         	padding: 2vw 4vw;
         }
-        .grid-item {
+        .grid-item {/*each item is an individual project*/
         	display: flex; 
         	flex-direction: column; 
         	align-items: center;
@@ -57,7 +57,7 @@
         	text-decoration: none;
         }
 
-        .projectSkill{
+        .projectSkill{ /*the skills for each project*/
         	text-decoration: none;
         	padding: 0px;
         	text-align: center;
@@ -83,7 +83,12 @@
         		grid-template-columns: repeat(1, 330px);
         		column-gap: 20px;
         	}}
-	</style>
+        #filterContent{
+            display: none;
+            font-size: 20px;
+        }
+
+</style>
 </head>
 <body>
 	<div class="header">
@@ -99,14 +104,14 @@
 	 </div>
 
 	</div>
-	<h1>Projects</h1>
+	<h1 style="text-align: center;">Projects</h1>
 	<script type="text/javascript">
 
+		allSkills=[];
 		$.get("https://raw.githubusercontent.com/swoodberry13/sloansWorkshop/main/project_pages/projects.json",function( data ) {
 			str = JSON.stringify(data);
 			data = JSON.parse(data);
-			allSkills=[];
-
+			
 			str="";
 
 			data.forEach(function(project) { //adding all the projects to the page
@@ -127,30 +132,31 @@
 				}
 				str+="</ul>";
 
-				str+="</div>";//end of project box
+				str+="</div>";//end of html code for grid items/projects
 			})
+			filtOptions=addCollapsible(allSkills);
 
-
-			filterBoxCode="<div id=filter <h3>Filter: </h3>";
-			for(let i in allSkills){//reads in categories from JSON 
-				filterOptions+="<button>"+allSkills[i]+"</button>";
-			}
-			filterBoxCode+="</div>";
-			document.getElementById('filterBox').innerHTML = filterBoxCode;//adding products to the page along with the drop down
-			
-
-
-			document.getElementById('grid').innerHTML = str;
+			document.getElementById('grid').innerHTML = str;//adding all of the projects to the grid
+			document.getElementById('filterContent').innerHTML = filtOptions; //adding filter
 		})
 
+		function addCollapsible(allSkills){
+			filterBox="";//"<div id=\"filterOptions\">";
+			for(let i in allSkills){//goes through all the project catagories shown in the json
+				filterBox+="<button>"+allSkills[i]+"</button>";
+			}
+			filterBox+="</div>";
+			return filterBox;
+
+		}
+
+
 		selectedOptions=[]; //array to keep track of selected catagories
-		function filterFunct(select){
+
+		function filterFunct(select){//BROKEN NEED TO FIX!!!!!!!!!!!
 			if(select in selectedOptions){
 
 			}
-			// pick=$('#dropDown option:selected').text();//reads in which form option was picked
-			// pick="#"+pick;
-
 			//selects all the categories that don't have the pick
 			notPickStr=".projectSkill:not(:has("+pick+"))";
 
@@ -163,11 +169,29 @@
 			$(pickStr).parent().css({"display":"flex"});
 		}
 	</script>
-	<div id="filterBox"></div>
+
+	<div id="filterBox">
+		<button type="button" class="collapse">Filter Projects</button>
+		<div id="filterContent"></div>
+	</div>
+
 	<div id="container">
 		<div id="grid">
 		</div>
 	</div>
+	<script type="text/javascript">
+				let btn = document.getElementsByClassName("collapse");
+         
+        btn[0].addEventListener("click", function () {
+            this.classList.toggle("active");
+            let content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+	</script>
 	
 
 </body>

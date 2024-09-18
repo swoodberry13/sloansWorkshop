@@ -124,7 +124,7 @@ margin:8px;
 	/* --end media size adjustments-- */
 
 /*--------------------CONTENT BOXES--------------------*/
-.title1{
+/*.title1{
 	margin-top: .5vw;
 	margin-left: .75vw;
 	margin-right: .75vw;
@@ -132,7 +132,7 @@ margin:8px;
 	position: relative;
 	max-width: max-content;
 	text-align: center;
-		 }
+		 }*/
 
 .imgBlock{
 	display: flex;

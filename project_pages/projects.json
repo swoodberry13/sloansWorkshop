@@ -64,7 +64,7 @@
 	},
 	{
 		"name":"Shelf",
-		"img":"images/projects/desk/deskMAIN.jpg",
+		"img":"images/projects/shelf/shelfMAIN.jpg",
 		"description":"A small shelf I designed and built for a friend",
 		"link":"project_pages/shelf.html",
 		"skills": ["Design","Woodworking"]
