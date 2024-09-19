@@ -86,6 +86,7 @@
         #filterContent{
             display: none;
             font-size: 20px;
+             transition: max-height 1s ease-out;
         }
 
 </style>
@@ -140,6 +141,7 @@
 			document.getElementById('filterContent').innerHTML = filtOptions; //adding filter
 		})
 
+		//adds all of the buttons in the collapsable filter for each catagory
 		function addCollapsible(allSkills){
 			filterBox="";//"<div id=\"filterOptions\">";
 			for(let i in allSkills){//goes through all the project catagories shown in the json
@@ -180,11 +182,12 @@
 		</div>
 	</div>
 	<script type="text/javascript">
-				let btn = document.getElementsByClassName("collapse");
+		//this is the code for the collapsing menu
+		let btn = document.getElementsByClassName("collapse");
          
         btn[0].addEventListener("click", function () {
             this.classList.toggle("active");
-            let content = this.nextElementSibling;
+            let content = this.nextElementSibling;//whatever comes after the thing with class=collapse
             if (content.style.display === "block") {
                 content.style.display = "none";
             } else {
